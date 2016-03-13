@@ -86,32 +86,29 @@
 		<p>Which peer role types are compatibile with your 1st preferred role type?</p>
 		<p>You can select as many as necessary.</p>
 
-		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_1" value="Coordinator">
+		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_1" value="Coordinator" class="target">
 		Coordinator</br>
 
-		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_2" value="Shaper">
+		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_2" value="Shaper" class="target">
 		Shaper</br>
 
-		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_3" value="Implementer">
+		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_3" value="Implementer" class="target">
 		Implementer</br>
 
-		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_4" value="Plant">
+		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_4" value="Plant" class="target">
 		Plant</br>
 
-		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_5" value="TeamWorker">
+		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_5" value="TeamWorker" class="target">
 		Team Worker</br>
 
-		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_6" value="Monitor">
+		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_6" value="Monitor" class="target">
 		Monitor Evaluator</br>
 
-		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_7" value="Completer">
+		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_7" value="Completer" class="target">
 		Completer Finisher</br>
 
-		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_8" value="Resource_Investigator">
+		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_8" value="Resource_Investigator" class="target">
 		Resource Investigator</br>
-
-		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_9" value="none">
-		None of the above</br>
 
 	</div>
 
@@ -119,32 +116,32 @@
 		<p>Which peer role types are likely to clash with your 1st preferred role type?</p>
 		<p>You can select as many as necessary.</p>
 
-		<input type="checkbox" name="first_conflict" id="first_conflict_option_1" value="Coordinator">
+		<input type="checkbox" name="first_conflict" id="first_conflict_option_1" value="Coordinator" class="target">
 		Coordinator</br>
 
-		<input type="checkbox" name="first_conflict" id="first_conflict_option_2" value="Shaper">
+		<input type="checkbox" name="first_conflict" id="first_conflict_option_2" value="Shaper" class="target">
 		Shaper</br>
 
-		<input type="checkbox" name="first_conflict" id="first_conflict_option_3" value="Implementer">
+		<input type="checkbox" name="first_conflict" id="first_conflict_option_3" value="Implementer" class="target">
 		Implementer</br>
 
-		<input type="checkbox" name="first_conflict" id="first_conflict_option_4" value="Plant">
+		<input type="checkbox" name="first_conflict" id="first_conflict_option_4" value="Plant" class="target">
 		Plant</br>
 
-		<input type="checkbox" name="first_conflict" id="first_conflict_option_5" value="TeamWorker">
+		<input type="checkbox" name="first_conflict" id="first_conflict_option_5" value="TeamWorker" class="target">
 		Team Worker</br>
 
-		<input type="checkbox" name="first_conflict" id="first_conflict_option_6" value="Monitor">
+		<input type="checkbox" name="first_conflict" id="first_conflict_option_6" value="Monitor" class="target">
 		Monitor Evaluator</br>
 
-		<input type="checkbox" name="first_conflict" id="first_conflict_option_7" value="Completer">
+		<input type="checkbox" name="first_conflict" id="first_conflict_option_7" value="Completer" class="target">
 		Completer Finisher</br>
 
-		<input type="checkbox" name="first_conflict" id="first_conflict_option_8" value="Resource_Investigator">
+		<input type="checkbox" name="first_conflict" id="first_conflict_option_8" value="Resource_Investigator" class="target">
 		Resource Investigator</br>
 
-		<input type="checkbox" name="first_conflict" id="first_conflict_option_9" value="none">
-		None of the above</br>
+		<input type="checkbox" name="first_conflict" id="first_conflict_option_9" value="none" class="target">
+		No increased likelihood of conflict between this role and any other particular role</br>
 
 	</div>
 
@@ -175,32 +172,30 @@
 		<p>Which peer role types are compatibile with your 2nd preferred role type?</p>
 		<p>You can select as many as necessary.</p>
 
-		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_1" value="Coordinator">
+		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_1" value="Coordinator" class="target">
 		Coordinator</br>
 
-		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_2" value="Shaper">
+		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_2" value="Shaper" class="target">
 		Shaper</br>
 
-		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_3" value="Implementer">
+		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_3" value="Implementer" class="target">
 		Implementer</br>
 
-		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_4" value="Plant">
+		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_4" value="Plant" class="target">
 		Plant</br>
 
-		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_5" value="TeamWorker">
+		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_5" value="TeamWorker" class="target">
 		Team Worker</br>
 
-		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_6" value="Monitor">
+		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_6" value="Monitor" class="target">
 		Monitor Evaluator</br>
 
-		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_7" value="Completer">
+		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_7" value="Completer" class="target">
 		Completer Finisher</br>
 
-		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_8" value="Resource_Investigator">
+		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_8" value="Resource_Investigator" class="target">
 		Resource Investigator</br>
 
-		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_9" value="none">
-		None of the above</br>
 
 	</div>
 
@@ -208,32 +203,32 @@
 		<p>Which peer role types are likely to clash with your 2nd preferred role type?</p>
 		<p>You can select as many as necessary.</p>
 
-		<input type="checkbox" name="second_conflict" id="second_conflict_option_1" value="Coordinator">
+		<input type="checkbox" name="second_conflict" id="second_conflict_option_1" value="Coordinator" class="target">
 		Coordinator</br>
 
-		<input type="checkbox" name="second_conflict" id="second_conflict_option_2" value="Shaper">
+		<input type="checkbox" name="second_conflict" id="second_conflict_option_2" value="Shaper" class="target">
 		Shaper</br>
 
-		<input type="checkbox" name="second_conflict" id="second_conflict_option_3" value="Implementer">
+		<input type="checkbox" name="second_conflict" id="second_conflict_option_3" value="Implementer" class="target">
 		Implementer</br>
 
-		<input type="checkbox" name="second_conflict" id="second_conflict_option_4" value="Plant">
+		<input type="checkbox" name="second_conflict" id="second_conflict_option_4" value="Plant" class="target">
 		Plant</br>
 
-		<input type="checkbox" name="second_conflict" id="second_conflict_option_5" value="TeamWorker">
+		<input type="checkbox" name="second_conflict" id="second_conflict_option_5" value="TeamWorker" class="target">
 		Team Worker</br>
 
-		<input type="checkbox" name="second_conflict" id="second_conflict_option_6" value="Monitor">
+		<input type="checkbox" name="second_conflict" id="second_conflict_option_6" value="Monitor" class="target">
 		Monitor Evaluator</br>
 
-		<input type="checkbox" name="second_conflict" id="second_conflict_option_7" value="Completer">
+		<input type="checkbox" name="second_conflict" id="second_conflict_option_7" value="Completer" class="target">
 		Completer Finisher</br>
 
-		<input type="checkbox" name="second_conflict" id="second_conflict_option_8" value="Resource_Investigator">
+		<input type="checkbox" name="second_conflict" id="second_conflict_option_8" value="Resource_Investigator" class="target">
 		Resource Investigator</br>
 
-		<input type="checkbox" name="second_conflict" id="second_conflict_option_9" value="none">
-		None of the above</br>
+		<input type="checkbox" name="second_conflict" id="second_conflict_option_9" value="none" class="target">
+		No increased likelihood of conflict between this role and any other particular role</br>
 
 	</div>
 
@@ -242,23 +237,54 @@
 
 
 <button class="btn btn-primary btn-md submit_button">Submit</button> <button type='reset' class="btn btn-default btn-md resetButton">Reset</button>
+<span class="hint_text">The Submit button will enable once all the questions have been completed.</span>
+
 </form>
 
 
 
 <script type="text/javascript">$(document).ready(function(){
 
+	toggleGenerateButton("off");
 
 
 	$(".submit_button").click(function(event) {
 
 		var form_data = $('#survey_form').serializeArray();
-
-	
 		checkData(form_data);
 
 
 	});
+
+
+	$('.target').change(function(event){
+
+		var form_data = $('#survey_form').serializeArray();
+
+		var formated_data = {};
+
+		$.each(form_data,function(ind, obj){
+
+				if(!(obj["name"] in formated_data)){
+
+					formated_data[obj["name"]] = [obj["value"]];
+				}else{
+					formated_data[obj["name"]].push(obj["value"]);
+				}
+
+		});
+
+		saveData(form_data);
+
+
+		if(Object.keys(formated_data).length == 6){
+			toggleGenerateButton('on');
+		}else{
+			toggleGenerateButton('off');
+		}
+
+	});
+
 
 
 
@@ -281,6 +307,9 @@
 		  data: data,
 		  success: function(response) {
 			 console.log(response);
+
+			 updateStatus(response);
+
 		  },
 		  error: function(error){
 			  console.log(error);
@@ -312,6 +341,36 @@
 	}
 
 
+	function updateStatus(status_data){
+
+		$.each(status_data, function(key, val){
+
+
+				console.log(key+" - "+val);
+
+		});
+
+	}
+
+
+	/**
+	 * Toggles the submit button to on or off
+	 * @param  {string} state options["on", "off"]
+	 * @return {null}       No return
+	 */
+	function toggleGenerateButton(state){
+		if(state == "on"){
+			if($('.submit_button').is(":disabled")){
+				$('.submit_button').prop("disabled",false);
+				$(".hint_text").hide();
+			}
+		}else{
+			if(!$('.submit_button').is(":disabled")){
+				$('.submit_button').prop("disabled",true);
+				$(".hint_text").show();
+			}
+		}
+	}
 
 
 });</script>

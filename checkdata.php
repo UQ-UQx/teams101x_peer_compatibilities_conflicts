@@ -24,7 +24,7 @@
 
 				"Coordinator":{
 					"compatible":["Implementer", "TeamWorker"],
-					"conflict":[]
+					"conflict":["none"]
 				},
 
 				"TeamWorker":{
@@ -39,7 +39,7 @@
 
 				"Shaper":{
 					"compatible":["Resource_Investigator"],
-					"conflict":[]
+					"conflict":["none"]
 				},
 
 				"Resource_Investigator":{
@@ -52,7 +52,6 @@
 					"conflict":["Monitor"]
 				}
 			}
-
 	}';
 
 	$response_raw = $_POST['data'];
@@ -82,48 +81,91 @@
 
 		$pref = $obj["pref"];
 
+		$input_comp = $obj["com_con"]["com"];
+		$input_conf = $obj["com_con"]["con"];
+
+		$ans_comp = $answer_key["roles"][$pref]["compatible"];
+		$ans_conf = $answer_key["roles"][$pref]["conflict"];
+
+
+
+
 		if($ind == "first"){
 
 			$status["first_compatibility"] = false;
 			$status["first_conflict"] = false;
-			if(!array_diff($obj["com_con"]["com"], $answer_key["roles"][$pref]["compatible"])){
-				$status["first_compatibility"] = true;
+
+			if(count($input_comp) > count($ans_comp)){
+				if(count(array_intersect($input_comp, $ans_comp)) == count($input_comp)){
+					$status["first_compatibility_status"] = true;
+				}
+			}else{
+				if(count(array_intersect($input_comp, $ans_comp)) == count($ans_comp)){
+					$status["first_compatibility_status"] = true;
+				}
 			}
-			if(!array_diff($obj["com_con"]["con"], $answer_key["roles"][$pref]["conflict"])){
-				$status["first_conflict"] = true;
+
+
+			if(count($input_conf) > count($ans_conf)){
+				if(count(array_intersect($input_conf, $ans_conf)) == count($input_conf)){
+					$status["first_conflict_status"] = true;
+				}
+			}else{
+				if(count(array_intersect($input_conf, $ans_conf)) == count($ans_conf)){
+					$status["first_conflict_status"] = true;
+				}
 			}
+
+
+			// if(count(array_intersect($obj["com_con"]["com"], $answer_key["roles"][$pref]["compatible"])) == count($answer_key["roles"][$pref]["compatible"])){
+			// 	$status["first_compatibility"] = true;
+			// }
+			// if(count(array_intersect($obj["com_con"]["con"], $answer_key["roles"][$pref]["conflict"])) == count($answer_key["roles"][$pref]["conflict"])){
+			// 	$status["first_conflict"] = true;
+			// }
+
 		}
 
 		if($ind == "second"){
 
+
+
+
 			$status["second_compatibility"] = false;
 			$status["second_conflict"] = false;
-			if(!array_diff($obj["com_con"]["com"], $answer_key["roles"][$pref]["compatible"])){
-				$status["second_compatibility"] = true;
+
+			if(count($input_comp) > count($ans_comp)){
+				if(count(array_intersect($input_comp, $ans_comp)) == count($input_comp)){
+					$status["second_compatibility_status"] = true;
+				}
+			}else{
+				if(count(array_intersect($input_comp, $ans_comp)) == count($ans_comp)){
+					$status["second_compatibility_status"] = true;
+				}
 			}
-			if(!array_diff($obj["com_con"]["con"], $answer_key["roles"][$pref]["conflict"])){
-				$status["second_conflict"] = true;
+
+
+			if(count($input_conf) > count($ans_conf)){
+				if(count(array_intersect($input_conf, $ans_conf)) == count($input_conf)){
+					$status["second_conflict_status"] = true;
+				}
+			}else{
+				if(count(array_intersect($input_conf, $ans_conf)) == count($ans_conf)){
+					$status["second_conflict_status"] = true;
+				}
 			}
+	
 		}
 
 
 	}
 
-	print_r($status);
-
-
-// $containsAllValues = !array_diff($obj["com"], $all);
+	 // print_r($status);
 
 
 
 
-
-	echo '{
-		
-			"status":"we have an ok",
-			"response":"'.$response_raw.'"
-
-	}';
+	echo json_encode($status);
 
 
 ?>
