@@ -51,6 +51,22 @@
 		text-align: center;
 	}
 
+	.fa-check{
+
+		color:green;
+
+	}
+
+	.fa-times{
+
+		color:red;
+	}
+
+	.status {
+
+		font-size: 20px;
+	}
+
 </style>
 
 
@@ -110,6 +126,8 @@
 		<input type="checkbox" name="first_compatibility" id="first_compatibility_option_8" value="Resource_Investigator" class="target">
 		Resource Investigator</br>
 
+		<i class="first_compatibility_status status"></i>
+
 	</div>
 
 	<div class="input_container preferences_inputs">
@@ -142,6 +160,8 @@
 
 		<input type="checkbox" name="first_conflict" id="first_conflict_option_9" value="none" class="target">
 		No increased likelihood of conflict between this role and any other particular role</br>
+
+		<i class="first_conflict_status status"></i>
 
 	</div>
 
@@ -196,6 +216,8 @@
 		<input type="checkbox" name="second_compatibility" id="second_compatibility_option_8" value="Resource_Investigator" class="target">
 		Resource Investigator</br>
 
+		<i class="second_compatibility_status status"></i>
+
 
 	</div>
 
@@ -230,6 +252,8 @@
 		<input type="checkbox" name="second_conflict" id="second_conflict_option_9" value="none" class="target">
 		No increased likelihood of conflict between this role and any other particular role</br>
 
+		<i class="second_conflict_status status"></i>
+
 	</div>
 
 
@@ -250,8 +274,33 @@
 
 	$(".submit_button").click(function(event) {
 
+		$(".resetButton").addClass('disabled');
+		$(".resetButton").prop("disabled", true);
+
+		$(this).addClass('disabled');
+		$(this).prop("disabled", true);
+		$(this).empty().append("Submitting <i class='fa fa-spinner fa-pulse'></i>");
+
+
 		var form_data = $('#survey_form').serializeArray();
 		checkData(form_data);
+
+	});
+
+	$(".resetButton").click(function(evemt){
+
+		$(".submit_button").addClass('disabled');
+		$(".submit_button").prop("disabled", true);
+
+		$(this).addClass('disabled');
+		$(this).prop("disabled", true);
+ 		$(this).empty().append("Resetting <i class='fa fa-spinner fa-pulse'></i>");
+
+		$('#survey_form')[0].reset();
+		var form_data = $('#survey_form').serializeArray();
+		checkData(form_data);
+
+		$('.status').removeClass("fa fa-times fa-check");
 
 
 	});
@@ -265,14 +314,15 @@
 
 		$.each(form_data,function(ind, obj){
 
-				if(!(obj["name"] in formated_data)){
+			if(!(obj["name"] in formated_data)){
 
-					formated_data[obj["name"]] = [obj["value"]];
-				}else{
-					formated_data[obj["name"]].push(obj["value"]);
-				}
+				formated_data[obj["name"]] = [obj["value"]];
+			}else{
+				formated_data[obj["name"]].push(obj["value"]);
+			}
 
 		});
+
 
 		saveData(form_data);
 
@@ -300,7 +350,6 @@
 		data['lis_outcome_service_url'] = '<?php echo $lti->grade_url(); ?>';
 		data['lis_result_sourcedid'] = '<?php echo $lti->result_sourcedid(); ?>';
 
-
 		$.ajax({
 		  type: "POST",
 		  url: "checkdata.php",
@@ -308,7 +357,26 @@
 		  success: function(response) {
 			 console.log(response);
 
-			 updateStatus(response);
+			 if(response["submit"] == true){
+				 updateStatus(response);
+
+				$(".resetButton").removeClass('disabled');
+				$(".resetButton").prop("disabled", false);
+
+				$(".submit_button").removeClass('disabled');
+				$(".submit_button").prop("disabled", false);
+ 				$(".submit_button").empty().append("Submit");
+
+			 }else{
+
+				$(".submit_button").removeClass('disabled');
+				$(".submit_button").prop("disabled", false);
+
+			 	$(".resetButton").removeClass('disabled');
+				$(".resetButton").prop("disabled", false);
+ 				$(".resetButton").empty().append("Reset");
+
+			 }
 
 		  },
 		  error: function(error){
@@ -319,20 +387,6 @@
 
 	}
 
-	function displayStatus(status){
-
-		/**
-
-			first_compatibility_status:false;
-			first_conflict_status:true;
-
-			second_compatibility_status:false;
-			second_conflict_status:true;
-
-		*/
-
-
-	}
 
 	function saveData(data){
 
@@ -345,8 +399,15 @@
 
 		$.each(status_data, function(key, val){
 
+				if(val == false){
 
-				console.log(key+" - "+val);
+					$("."+key).addClass("fa fa-times");
+
+				}else{
+
+					$("."+key).addClass("fa fa-check");
+
+				}
 
 		});
 
