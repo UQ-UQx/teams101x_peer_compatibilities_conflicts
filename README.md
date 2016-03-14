@@ -34,6 +34,29 @@ once cloned, create a file called "config.php" and add the following with your d
 ?>
 ```
 
+### Database
+#### MySQL
+> Version Ver 14.14 Distrib 5.1.73, for redhat-linux-gnu (x86_64) using readline 5.1
+
+#### Tables
+
+* Responses
+
+```sql
+
+CREATE TABLE `responses` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` text,
+  `survey_id` text NOT NULL,
+  `response` mediumtext,
+  `created` datetime DEFAULT NULL,
+  `updated` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+```
+
+
 ### LTI Setup
 1. Edit config.php with your respective LTI keys and optional database details
 2. Host on a https server (LTI with edX requires HTTPS)
