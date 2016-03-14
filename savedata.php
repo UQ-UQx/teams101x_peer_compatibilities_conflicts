@@ -13,20 +13,16 @@
 		Db::config( 'user',     $config['db']['username'] );
 		Db::config( 'password', $config['db']['password'] );
 	}
-		$vars = array('user_id'=>$_POST['user_id'],'oauth_consumer_key'=>$_POST['lti_id'], 'lis_outcome_service_url'=>$_POST['lis_outcome_service_url'], 'lis_result_sourcedid'=>$_POST['lis_result_sourcedid']);
+
+	$vars = array('user_id'=>$_POST['user_id'],'oauth_consumer_key'=>$_POST['lti_id'], 'lis_outcome_service_url'=>$_POST['lis_outcome_service_url'], 'lis_result_sourcedid'=>$_POST['lis_result_sourcedid']);
 	$lti->setltivars($vars);
 	require_once('model.php');
 
 
 	$response = $_POST['data'];
+
 	$sid = $_POST['sid'];
 
-	// $params = array();
-	// parse_str($_POST['form'], $params);
-
-	// $score = count($params)/26;
-
-	// send_grade($score,$lti);
 
 	setResponse($sid, $response);
 
