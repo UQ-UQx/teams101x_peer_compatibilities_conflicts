@@ -14,7 +14,7 @@
 			"roles":{
 
 				"Implementer":{
-					"compatible":["Resource_Investigator", "Monitor", "Coordinator"],
+					"compatible":["Resource_Investigator", "Monitor", "Coordinator", "Completer"],
 					"conflict":["Implementer", "Plant"]
 				},
 
@@ -25,12 +25,12 @@
 
 				"Coordinator":{
 					"compatible":["Implementer", "TeamWorker"],
-					"conflict":["none"]
+					"conflict":["Shaper"]
 				},
 
 				"TeamWorker":{
-					"compatible":["TeamWorker", "Implementer", "Plant"],
-					"conflict":["Shaper"]
+					"compatible":["TeamWorker", "Plant"],
+					"conflict":["none"]
 				},
 
 				"Monitor":{
@@ -50,7 +50,7 @@
 
 				"Completer":{
 					"compatible":["Implementer"],
-					"conflict":["Monitor"]
+					"conflict":["Resource_Investigator"]
 				}
 			}
 	}';
